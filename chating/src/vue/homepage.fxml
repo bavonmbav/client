@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.HomepageController">
+   <top>
+      <HBox onMouseDragged="#getDragged" onMouseMoved="#getMove" prefHeight="59.0" prefWidth="600.0" styleClass="menu-bar" stylesheets="@../styles/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="95.0">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_chat_bubble_96px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="16.0" layoutY="36.0" text="GoChat" textFill="WHITE" />
+               </children>
+            </Pane>
+            <HBox maxHeight="1.7976931348623157E308" prefHeight="68.0" prefWidth="154.0">
+               <children>
+                  <Pane prefHeight="22.0" prefWidth="154.0" />
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+            <ImageView fitHeight="32.0" fitWidth="150.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_cancel_96px.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="546.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="48.0" prefWidth="711.0" styleClass="menu-bar" stylesheets="@../styles/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="124.0">
+                     <children>
+                        <ImageView fitHeight="47.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_signin_64px.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#eeeeee" onMouseClicked="#getHistory" strokeType="OUTSIDE" strokeWidth="0.0" text="Hostory" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets right="-4.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="197.0" styleClass="menu-bar" stylesheets="@../styles/style.css">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="124.0">
+                           <children>
+                              <ImageView fitHeight="47.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8_male_user_100px.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#eeeeee" onMouseClicked="#login" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="RIGHT">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="413.0">
+               <HBox.margin>
+                  <Insets left="251.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="19.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="392.0" prefWidth="382.0" styleClass="menu-bar" stylesheets="@../styles/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="689.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_user_100px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <ScrollPane fx:id="sp_main" fitToWidth="true" prefHeight="332.0" prefWidth="695.0">
+                     <content>
+                        <VBox fx:id="boxMsp" prefHeight="38.0" prefWidth="687.0" />
+                     </content>
+                  </ScrollPane>
+                  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="689.0" style="-fx-background-color: #202124;">
+                     <children>
+                        <TextField fx:id="if_message" prefHeight="86.0" prefWidth="505.0" promptText="taper un message" style="-fx-background-color: #202124;" styleClass="menu-bar" stylesheets="@../styles/style.css">
+                           <HBox.margin>
+                              <Insets left="126.0" right="-56.0" top="13.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <ImageView fx:id="send" fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_email_send_48px.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="85.0" right="3.0" top="31.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="43.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <ListView fx:id="liste" prefHeight="200.0" prefWidth="200.0" styleClass="menu-bar" stylesheets="@../styles/style.css" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

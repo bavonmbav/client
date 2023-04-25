@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="pere" onMouseDragged="#getDragged" onTouchMoved="#getMove" prefHeight="400.0" prefWidth="600.0" styleClass="pan" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.RegistreController">
+   <children>
+      <VBox layoutX="148.0" layoutY="36.0" prefHeight="329.0" prefWidth="305.0" styleClass="header-panel">
+         <children>
+            <Label text="Register" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="112.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="30.0" prefWidth="271.0" styleClass="header-panel">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_user_100px.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="nom" alignment="CENTER" opacity="0.64" prefHeight="25.0" prefWidth="245.0" promptText="Nom" style="-fx-background-color: #333740;">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="30.0" prefWidth="271.0" styleClass="header-panel">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_user_100px.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="prenom" alignment="CENTER" opacity="0.64" prefHeight="25.0" prefWidth="245.0" promptText="prenom" style="-fx-background-color: #333740;">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="30.0" prefWidth="271.0" styleClass="header-panel">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_secured_letter_100px.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="adressMail" alignment="CENTER" opacity="0.64" prefHeight="25.0" prefWidth="245.0" promptText="adress mail" style="-fx-background-color: #333740;">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets right="30.0" top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="30.0" prefWidth="271.0" styleClass="header-panel">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_lock_52px.png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="25.0" prefWidth="245.0">
+                     <children>
+                        <TextField fx:id="passAfficher" alignment="CENTER" prefHeight="25.0" prefWidth="245.0" promptText="PassWord" style="-fx-background-color: #333740;" styleClass="pan" visible="false">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="passMasquer" alignment="CENTER" opacity="0.46" prefHeight="25.0" prefWidth="245.0" promptText="PassWord" style="-fx-background-color: #333740;" styleClass="pan">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </PasswordField>
+                     </children>
+                  </Pane>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="305.0">
+                     <children>
+                        <CheckBox fx:id="checkBoxs" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#getCrocher" textFill="#76ddc4" textOverrun="CENTER_ELLIPSIS">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <padding>
+                              <Insets right="9.0" />
+                           </padding>
+                        </CheckBox>
+                        <Text fx:id="afficher" fill="#56b28d" strokeType="OUTSIDE" strokeWidth="0.0" text="affichier le mot de passe">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="9.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="46.0" prefWidth="305.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#getEnregistrer" prefHeight="44.0" prefWidth="119.0" styleClass="pan" text="Enregistrer" textFill="#79e4d6">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="100.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="29.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8_chat_bubble_96px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="32.0" layoutY="50.0" text="GoChat" textFill="WHITE" />
+      <Label layoutX="503.0" layoutY="349.0" onMouseClicked="#retour" text="Back" textFill="#86b5b2">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font></Label>
+      <ImageView fitHeight="94.0" fitWidth="40.0" layoutX="546.0" layoutY="10.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8_cancel_96px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
